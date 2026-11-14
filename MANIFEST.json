@@ -1,16 +1,104 @@
 {
   "version": 1,
   "files": {
+    ".gitignore": {
+      "sha256": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672",
+      "executable": false
+    },
     "README.md": {
-      "sha256": "93c3c41f76a3fe6fceadb3585832141743d142581c48afdb3955b9fa9c560b82",
+      "sha256": "84c408ba450dbba4a3807c922ad3002c1335a26438ca95bae684f1a331190b13",
       "executable": false
     },
     "VALIDATION.json": {
-      "sha256": "fd76f3be448b6d61a9eef27395f846e22200d72e8a55a415a966086c7a3587f9",
+      "sha256": "d275f580e082dbcef69afbe6b32c4d951e49eda20942b6212f2398044a59a0c8",
+      "executable": false
+    },
+    "htk-vim/README.md": {
+      "sha256": "1c9340b5e65834be754399240bfc84da2440b7f93fb41618cccd19de217d6000",
+      "executable": false
+    },
+    "htk-vim/libexec/herdr_controls/README.md": {
+      "sha256": "6615d954f0504e1141f77b1fb1fe92a81cf94077833db3c77e0cb47281996b22",
+      "executable": false
+    },
+    "htk-vim/libexec/herdr_controls/keymap.py": {
+      "sha256": "53692660061062105dfedf2094112ae9ef414ca6d15aafcf7e9af9ab0ba16519",
+      "executable": false
+    },
+    "htk-vim/libexec/herdr_controls/pane.py": {
+      "sha256": "90c0f49b4bda5cd0cff33d308504e87a67a48b59ed668c75776f8e2a3564c72e",
+      "executable": false
+    },
+    "htk-vim/libexec/herdr_controls/pane_to_tab.py": {
+      "sha256": "abe836543a9694c0a6101a6bd0e59fc78d927313742b2affe4afcf11bb48ef92",
+      "executable": false
+    },
+    "htk-vim/libexec/herdr_controls/workspace.py": {
+      "sha256": "10e1b3f20606d8d0f026270de520910420fae4a47a888584c19f6916c45d549b",
+      "executable": false
+    },
+    "htk-vim/plugins/keymap/herdr-plugin.toml": {
+      "sha256": "ab23c0f9f43bb8a222f50e29ded4e4c39dda2959a6d498e050fcae24cf763d36",
+      "executable": false
+    },
+    "htk-vim/plugins/keymap/run.sh": {
+      "sha256": "3acdb9aeaeef8a53a9219df6628767a3296446cd8de2158c4ee222cd4f6782d1",
+      "executable": false
+    },
+    "htk-vim/presets/ghostty/herdr-vim.conf": {
+      "sha256": "fbc301b206d468513b64e1978be012235ce00a6134ba345f31b70b4c9faac021",
+      "executable": false
+    },
+    "htk-vim/presets/ghostty/keymap-popup.conf": {
+      "sha256": "f7a4b8c68b8effecb6f1f64c0f2e7dde14e4c257d6109c012198654cf9971d1e",
+      "executable": false
+    },
+    "htk-vim/presets/ghostty/navigation.conf": {
+      "sha256": "a7038f74d9726c473bbbc11cc1ed480ef525c4fe9157bacbe0a1123bc41ad6c0",
+      "executable": false
+    },
+    "htk-vim/presets/herdr/keymap-popup.toml": {
+      "sha256": "8b50602aa91fe84bc1f1b29058b5ba9cd61a4dd4c97dcab83260aaaf2c2fdbde",
+      "executable": false
+    },
+    "htk-vim/presets/herdr/navigation.toml": {
+      "sha256": "aef80bb9b7623bb2d42d6c27036e01f4e39e0427fda9f5c10e264372394c834f",
+      "executable": false
+    },
+    "htk-vim/presets/herdr/vim-keys.toml": {
+      "sha256": "8af6b4b8ead4329b24b20bf71f483425af00c16cab8f17d31fb3f368a402df09",
+      "executable": false
+    },
+    "htk-vim/presets/tmux/terminal.conf": {
+      "sha256": "3149f1462ea7f40120df2d6391b68835ed534b3a51d3a98cf6650edc426d4a4e",
+      "executable": false
+    },
+    "htk-vim/tests/test_distribution.py": {
+      "sha256": "ac462cc0ed6b7900b66957b3135e8020484f79ebb85fa79c1f21faa3e6160451",
+      "executable": false
+    },
+    "htk-vim/tests/test_keymap.py": {
+      "sha256": "54dcf718cdd3e96a37ff6156c314e9596e03fe62ee3fb99c4a22824da4069e84",
+      "executable": false
+    },
+    "htk-vim/tests/test_move_workspace.py": {
+      "sha256": "a143ed0845bf78f8806308750688cfd853e8fbd833bcc978bdda49f626b6ea57",
+      "executable": false
+    },
+    "htk-vim/tests/test_pane_control.py": {
+      "sha256": "312fa8b371e114fc23d626edcb4464b376327379156efd0c752ac3afff7fc5ae",
+      "executable": false
+    },
+    "htk-vim/tests/test_pane_to_tab.py": {
+      "sha256": "a2e7fa1983bb7677f66eb10da428db6404651bbe0bfd6295b4744a54a5acd625",
+      "executable": false
+    },
+    "htk-vim/toolkit.toml": {
+      "sha256": "d9bbcd91a75ddfd6ab17d284098330cda9836b59fc33c2ff087809e6a136f8de",
       "executable": false
     },
     "htk/README.md": {
-      "sha256": "987a5790208343f542770c963191c7f6f21bce65f018b60637ac3f8342dd9339",
+      "sha256": "db33178d71a095ac0e6500b9c036f2f9d5d7071aad66a17aba39a42dbe25b945",
       "executable": false
     },
     "htk/bin/daily-toolkit": {
@@ -46,7 +134,7 @@
       "executable": true
     },
     "htk/bootstrap.sh": {
-      "sha256": "35e0b6e49090a3b844aea7f09cfd3a2d1cf410057ebf61d6966d2eadbb8be9ed",
+      "sha256": "a5342c4ae4b7dd444649f19fd09d1b93936f34ea21a737bd7c0bb5375b916d62",
       "executable": true
     },
     "htk/libexec/cli_support.py": {
@@ -281,92 +369,12 @@
       "sha256": "88e19b1fa532c7158b91cac9fa107cac496592ec427d35f0fdcea625a751e53a",
       "executable": false
     },
-    "htk-vim/README.md": {
-      "sha256": "1c9340b5e65834be754399240bfc84da2440b7f93fb41618cccd19de217d6000",
-      "executable": false
-    },
-    "htk-vim/libexec/herdr_controls/README.md": {
-      "sha256": "6615d954f0504e1141f77b1fb1fe92a81cf94077833db3c77e0cb47281996b22",
-      "executable": false
-    },
-    "htk-vim/libexec/herdr_controls/keymap.py": {
-      "sha256": "53692660061062105dfedf2094112ae9ef414ca6d15aafcf7e9af9ab0ba16519",
-      "executable": false
-    },
-    "htk-vim/libexec/herdr_controls/pane.py": {
-      "sha256": "90c0f49b4bda5cd0cff33d308504e87a67a48b59ed668c75776f8e2a3564c72e",
-      "executable": false
-    },
-    "htk-vim/libexec/herdr_controls/pane_to_tab.py": {
-      "sha256": "abe836543a9694c0a6101a6bd0e59fc78d927313742b2affe4afcf11bb48ef92",
-      "executable": false
-    },
-    "htk-vim/libexec/herdr_controls/workspace.py": {
-      "sha256": "10e1b3f20606d8d0f026270de520910420fae4a47a888584c19f6916c45d549b",
-      "executable": false
-    },
-    "htk-vim/plugins/keymap/herdr-plugin.toml": {
-      "sha256": "ab23c0f9f43bb8a222f50e29ded4e4c39dda2959a6d498e050fcae24cf763d36",
-      "executable": false
-    },
-    "htk-vim/plugins/keymap/run.sh": {
-      "sha256": "3acdb9aeaeef8a53a9219df6628767a3296446cd8de2158c4ee222cd4f6782d1",
-      "executable": false
-    },
-    "htk-vim/presets/ghostty/herdr-vim.conf": {
-      "sha256": "fbc301b206d468513b64e1978be012235ce00a6134ba345f31b70b4c9faac021",
-      "executable": false
-    },
-    "htk-vim/presets/ghostty/keymap-popup.conf": {
-      "sha256": "f7a4b8c68b8effecb6f1f64c0f2e7dde14e4c257d6109c012198654cf9971d1e",
-      "executable": false
-    },
-    "htk-vim/presets/ghostty/navigation.conf": {
-      "sha256": "a7038f74d9726c473bbbc11cc1ed480ef525c4fe9157bacbe0a1123bc41ad6c0",
-      "executable": false
-    },
-    "htk-vim/presets/herdr/keymap-popup.toml": {
-      "sha256": "8b50602aa91fe84bc1f1b29058b5ba9cd61a4dd4c97dcab83260aaaf2c2fdbde",
-      "executable": false
-    },
-    "htk-vim/presets/herdr/navigation.toml": {
-      "sha256": "aef80bb9b7623bb2d42d6c27036e01f4e39e0427fda9f5c10e264372394c834f",
-      "executable": false
-    },
-    "htk-vim/presets/herdr/vim-keys.toml": {
-      "sha256": "8af6b4b8ead4329b24b20bf71f483425af00c16cab8f17d31fb3f368a402df09",
-      "executable": false
-    },
-    "htk-vim/presets/tmux/terminal.conf": {
-      "sha256": "3149f1462ea7f40120df2d6391b68835ed534b3a51d3a98cf6650edc426d4a4e",
-      "executable": false
-    },
-    "htk-vim/tests/test_distribution.py": {
-      "sha256": "ac462cc0ed6b7900b66957b3135e8020484f79ebb85fa79c1f21faa3e6160451",
-      "executable": false
-    },
-    "htk-vim/tests/test_keymap.py": {
-      "sha256": "54dcf718cdd3e96a37ff6156c314e9596e03fe62ee3fb99c4a22824da4069e84",
-      "executable": false
-    },
-    "htk-vim/tests/test_move_workspace.py": {
-      "sha256": "a143ed0845bf78f8806308750688cfd853e8fbd833bcc978bdda49f626b6ea57",
-      "executable": false
-    },
-    "htk-vim/tests/test_pane_control.py": {
-      "sha256": "312fa8b371e114fc23d626edcb4464b376327379156efd0c752ac3afff7fc5ae",
-      "executable": false
-    },
-    "htk-vim/tests/test_pane_to_tab.py": {
-      "sha256": "a2e7fa1983bb7677f66eb10da428db6404651bbe0bfd6295b4744a54a5acd625",
-      "executable": false
-    },
-    "htk-vim/toolkit.toml": {
-      "sha256": "d9bbcd91a75ddfd6ab17d284098330cda9836b59fc33c2ff087809e6a136f8de",
+    "personal/codex/config.toml": {
+      "sha256": "e9b5903461283afb3bb5d3c94ad7a9d00bd10fc65c2ff70e3f4edeca69773cb8",
       "executable": false
     },
     "personal/ghostty/config": {
-      "sha256": "ea9010c9373b96231b3297cb593d2a391e035d51b5db090d629a3b5a2a8a0bdb",
+      "sha256": "4f325498b170bc43d1b3308ba812bc0188d554b44dc5d664254f83c306c437d4",
       "executable": false
     },
     "personal/ghostty/themes/Monokai Pro": {
@@ -374,7 +382,7 @@
       "executable": false
     },
     "personal/herdr/config.toml": {
-      "sha256": "e088965cfb5a44f7705dcf5bede9b9029d8da7683b9a6baa3d8759ecc8b036db",
+      "sha256": "a35299bcc96a84adf8fee10b2a26aef9b36b2ae2682020f63540b7adaed97d4b",
       "executable": false
     },
     "personal/herdr/monokai-pro.toml": {
@@ -398,15 +406,23 @@
       "executable": false
     },
     "personal/shell/aliases.zsh": {
-      "sha256": "d7e4a33968b20649314905ffe2e69350e01505577ec6475d30075c789b13833f",
+      "sha256": "967fc72081149bce652f413929cf2994ba1cd9cd143275d56d4e519dd260531a",
       "executable": false
     },
+    "personal/shell/codex": {
+      "sha256": "05f957bb09676dddcd52178d6bdf33fbfbfe371d5ab7cc92cdc89bd77a6fa4cd",
+      "executable": true
+    },
     "personal/skills/htk/SKILL.md": {
-      "sha256": "4d1bfdc489b1f294c6ffadbdacbdb9230fc868f0f471d573622174b00ffcfc69",
+      "sha256": "a5a77f3bd38f2ace71a9024fc8ebecc75751dd29631f9be326fdc827d3669ed5",
       "executable": false
     },
     "personal/skills/htk/references/status-template.md": {
       "sha256": "1ea670b1f61867f3ba8dfaa123c8e4653af54b43f8c7e75ba31c9731e2eaca26",
+      "executable": false
+    },
+    "personal/tests/test_codex_launcher.py": {
+      "sha256": "594bd972b7d98f3fdd7e9de0c3eff2fcbc07881988ffd341fc973d6dff4a2af0",
       "executable": false
     },
     "personal/tests/test_herdr_workspace.py": {
@@ -425,12 +441,16 @@
       "sha256": "633ac5f89b073155052556bf6f71cac7b5102c0e758e130e5d707e6504784ff6",
       "executable": true
     },
+    "tests/test_bootstrap.py": {
+      "sha256": "de4ea94185e4b99a1de9f8ac4667cf971f14c75ffe1fd538ea3bce8c356eb100",
+      "executable": false
+    },
     "tests/test_portable.py": {
       "sha256": "7467e8ec0e8b4c571895e37960d20d13503d3a4d29300a2895ab589647490865",
       "executable": false
     },
     "verify.py": {
-      "sha256": "ba4cd5c75265f208fef6949ff0dee64d1c8e2c1922e706252cb7ff81e1795233",
+      "sha256": "a65e6aa584e090c84ad9ee1f5f8874f69d0f669f0da419870ff17a38440b83ef",
       "executable": false
     },
     "verify.sh": {

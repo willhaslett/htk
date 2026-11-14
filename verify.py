@@ -11,22 +11,30 @@ import tempfile
 import time
 
 ROOT = Path(__file__).resolve().parent
+IGNORED = {'.git', '__pycache__', '.DS_Store'}
 
 
 def file_hash(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def check_manifest():
-    manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
-    files = manifest['files']
+def packaged_files():
     actual = {}
     for path in ROOT.rglob('*'):
+        if any(part in IGNORED for part in path.relative_to(ROOT).parts):
+            continue
         if path.is_symlink():
             raise ValueError('Unexpected symlink: ' + str(path.relative_to(ROOT)))
         if path.is_file() and path.name != 'MANIFEST.json':
             relative = str(path.relative_to(ROOT))
             actual[relative] = {'sha256': file_hash(path), 'executable': bool(path.stat().st_mode & 0o111)}
+    return actual
+
+
+def check_manifest():
+    manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
+    files = manifest['files']
+    actual = packaged_files()
     if actual != files:
         changed = sorted(set(actual) ^ set(files) | {p for p in actual.keys() & files.keys() if actual[p] != files[p]})
         raise ValueError('Packaged files differ from manifest: ' + ', '.join(changed))
@@ -46,7 +54,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="portable check ' ") as temporary:
         temporary = Path(temporary)
         tree = temporary / 'relocated setup with spaces'
-        shutil.copytree(ROOT, tree)
+        shutil.copytree(ROOT, tree, ignore=shutil.ignore_patterns(*IGNORED))
         home = temporary / 'isolated home'
         home.mkdir()
         runtime = temporary / 'runtime'
@@ -83,4 +91,11 @@ def main():
 
 
 if __name__ == '__main__':
+    if sys.argv[1:] == ['--update-manifest']:
+        manifest = {'version': 1, 'files': dict(sorted(packaged_files().items()))}
+        (ROOT / 'MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
+        print('Manifest updated; run ./verify.sh to validate this revision.')
+        raise SystemExit(0)
+    if sys.argv[1:]:
+        raise SystemExit('Usage: verify.py [--update-manifest]')
     raise SystemExit(main())

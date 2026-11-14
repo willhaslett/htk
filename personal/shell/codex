@@ -1,0 +1,23 @@
+#!/bin/bash
+# Give each terminal its own app server so Herdr hooks inherit that pane's IDs.
+set -euo pipefail
+codex_has_no_daemon=false
+for codex_argument in "$@"; do
+  [ "$codex_argument" != -- ] || break
+  if [ "$codex_argument" = --no-daemon ]; then
+    codex_has_no_daemon=true
+    break
+  fi
+done
+IFS=: read -r -a codex_search_path <<< "$PATH"
+for codex_directory in "${codex_search_path[@]}"; do
+  codex_candidate="${codex_directory:-.}/codex"
+  if [ -f "$codex_candidate" ] && [ -x "$codex_candidate" ] && [ ! "$codex_candidate" -ef "$0" ]; then
+    if [ "$codex_has_no_daemon" = true ]; then
+      exec "$codex_candidate" "$@"
+    fi
+    exec "$codex_candidate" --no-daemon "$@"
+  fi
+done
+printf 'HTK: install the Codex CLI and keep its bin directory on PATH.\n' >&2
+exit 127

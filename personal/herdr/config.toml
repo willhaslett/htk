@@ -1,4 +1,6 @@
 # Portable appearance and shortcuts. Merge only after backing up an existing config.
+onboarding = false
+
 [ui]
 window_title = "HTK · {workspace}"
 prompt_new_tab_name = false
@@ -50,18 +52,18 @@ cycle_pane_next = ["prefix+tab", "shift+cmd+p"]
 close_pane = ""
 close_tab = ""
 help = ""
-settings = ""
-detach = ""
-reload_config = ""
-open_notification_target = ""
-workspace_picker = ""
-goto = ""
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+shift+r"
+open_notification_target = "prefix+o"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
 new_worktree = ""
 close_workspace = ""
 switch_tab = ""
 rename_pane = ["prefix+ctrl+r", "alt+cmd+r"]
-edit_scrollback = ""
-copy_mode = ""
+edit_scrollback = ["prefix+e", "alt+cmd+e"]
+copy_mode = ["prefix+[", "alt+cmd+c"]
 focus_pane_left = ["prefix+h", "alt+cmd+h"]
 focus_pane_down = ["prefix+j", "alt+cmd+j"]
 focus_pane_up = ["prefix+k", "alt+cmd+k"]
@@ -70,11 +72,11 @@ swap_pane_left = ""
 swap_pane_down = ""
 swap_pane_up = ""
 swap_pane_right = ""
-cycle_pane_previous = ""
+cycle_pane_previous = "prefix+shift+tab"
 split_vertical = ""
 split_horizontal = ""
-zoom = ""
-resize_mode = ""
+zoom = ["prefix+z", "alt+cmd+z"]
+resize_mode = ["prefix+r", "alt+cmd+s"]
 toggle_sidebar = ["prefix+b", "cmd+b"]
 
 [[keys.command]]

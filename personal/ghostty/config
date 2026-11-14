@@ -1,9 +1,12 @@
-# Portable appearance and key forwarding.
-font-family = "Jetbrains Mono"
-font-size = 14
+# Herdr is the workspace manager for every new Ghostty terminal.
+command = shell:exec "$HOME/.local/bin/herdr"
+font-family = "Roboto Mono Light for Powerline"
+font-family = "Menlo"
+font-size = 12
 theme = dark:Monokai Pro,light:GitHub Light Default
-keybind = shift+cmd+t=text:\x02c
-keybind = shift+cmd+o=text:\x02.
+copy-on-select = true
+# Preserve the previous terminal's multiline-input shortcut.
+keybind = shift+enter=text:\x1b\r
 keybind = cmd+enter=text:\x1b[13;5u
 keybind = shift+cmd+enter=text:\x1b[13;10u
 keybind = ctrl+cmd+f=toggle_fullscreen
@@ -13,7 +16,7 @@ keybind = shift+cmd+[=unbind
 keybind = shift+cmd+]=unbind
 keybind = shift+cmd+left_bracket=unbind
 keybind = shift+cmd+right_bracket=unbind
-keybind = cmd+w=text:\x0e\x17
+keybind = cmd+w=ignore
 keybind = cmd+t=text:\x0ec
 keybind = cmd+n=text:\x0eN
 keybind = shift+cmd+n=text:\x0eP
@@ -59,3 +62,8 @@ keybind = ctrl+alt+cmd+h=text:\x0e1
 keybind = ctrl+alt+cmd+j=text:\x0e2
 keybind = ctrl+alt+cmd+k=text:\x0e3
 keybind = ctrl+alt+cmd+l=text:\x0e4
+# Native Herdr utilities, also available through the Ctrl+N prefix.
+keybind = alt+cmd+c=text:\x0e[
+keybind = alt+cmd+e=text:\x0ee
+keybind = alt+cmd+z=text:\x0ez
+keybind = alt+cmd+s=text:\x0er

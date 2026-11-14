@@ -1,32 +1,35 @@
 {
   "status": "passed",
-  "prepared": "2026-11-13",
+  "validated": "2026-11-13",
   "platform": "macOS arm64",
-  "relocated_isolated_tests": {
-    "total": 211,
-    "components": {
-      "local_tools": 140,
-      "keyboard_helpers": 42,
-      "personal_helpers": 20,
-      "portable_package": 9
-    }
+  "runtime": "managed CPython 3.12.13; private uv 0.11.2; existing uv 0.7.13 preserved",
+  "automated_tests": {
+    "relocated_isolated_suite": 213,
+    "additional_codex_launcher_tests": 2,
+    "total": 215
   },
-  "fresh_public_bootstrap_install_command_popup_and_rollback": "passed",
-  "native_markdown_adapter_compilation": "passed",
-  "herdr_exported_config_check": "passed",
-  "agent_skill_validation": "passed",
-  "content_review": {
-    "first_party_neutrality_scan": "passed",
-    "all_file_internal_endpoint_scan": "passed",
-    "credential_signature_scan": "passed",
-    "source_machine_path_scan": "passed",
-    "no_git_history_external_symlinks_or_runtime_data": true,
-    "bundled_vendor_assets_and_license_notices_preserved": true
+  "configuration": {
+    "herdr": "0.9.5, valid and live-reloaded",
+    "ghostty": "1.4.0, valid; user confirmed reload and Command+/ popup",
+    "codex": "0.169.0, strict config accepted, YOLO default confirmed in fresh session",
+    "codex_hook": "Herdr v10 installed and explicitly trusted; correct new-session identity verified"
   },
-  "limits": [
-    "Herdr and Ghostty interaction was not visually exercised.",
-    "Applications, optional fonts and user credentials are installed separately.",
-    "No existing application configuration or live service was changed."
+  "live_checks": [
+    "new numbered workspace",
+    "pane creation and movement preserve terminal identity",
+    "move pane to new tab",
+    "zoom on/off",
+    "close cancellation",
+    "agent-protected close",
+    "list and persisted status rendering",
+    "fresh Codex reads global HTK skill",
+    "new workspace with Codex uses --no-daemon",
+    "new Codex session identity reported to its own Herdr pane",
+    "original sessions and resume IDs preserved"
   ],
-  "zip_unzip_contents_and_executable_permissions": "passed"
+  "limits": [
+    "Herdr server restart/recovery was not exercised.",
+    "Every physical key chord was not manually tested.",
+    "Existing Codex processes keep their launch mode until restarted or resumed through the new launcher."
+  ]
 }

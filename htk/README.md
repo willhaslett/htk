@@ -1,4 +1,4 @@
-# Portable local tools
+# HTK tools
 
 `htk list`, `htk status`, `htk mdview`, `htk github-prs` and `htk name-session`
 are the commands included here. The GitHub viewer uses ordinary `gh` access;

@@ -11,15 +11,24 @@ case "$(/usr/bin/uname -s)-$(/usr/bin/uname -m)" in
   *) printf 'This bootstrap supports Apple Silicon and Intel macOS.\n' >&2; exit 1 ;;
 esac
 mkdir -p "$runtime/bin"
-# Reuse a compatible existing UV before considering provisioning. An explicit
-# path is useful when the user manages UV independently.
+# An explicit override must match. An unrelated UV on PATH is left untouched;
+# use the private pinned copy when that installation has a different version.
 uv_binary=${DAILY_TOOLKIT_UV:-$(command -v uv || true)}
-if [ -n "$uv_binary" ]; then
+if [ -n "$uv_binary" ] && [ -f "$uv_binary" ] && [ -x "$uv_binary" ]; then
   installed_version=$("$uv_binary" --version)
   case "$installed_version" in
     "uv $uv_version"|"uv $uv_version "*) ;;
-    *) printf 'UV %s required; set DAILY_TOOLKIT_UV to a compatible existing binary.\n' "$uv_version" >&2; exit 1 ;;
+    *)
+      if [ -n "${DAILY_TOOLKIT_UV:-}" ]; then
+        printf 'DAILY_TOOLKIT_UV must point to UV %s.\n' "$uv_version" >&2
+        exit 1
+      fi
+      uv_binary="$runtime/bin/uv-$uv_version"
+      ;;
   esac
+elif [ -n "${DAILY_TOOLKIT_UV:-}" ]; then
+  printf 'DAILY_TOOLKIT_UV is not executable: %s\n' "$DAILY_TOOLKIT_UV" >&2
+  exit 1
 else
   uv_binary="$runtime/bin/uv-$uv_version"
 fi

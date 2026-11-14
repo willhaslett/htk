@@ -3,9 +3,16 @@ name: htk
 description: Use the portable Herdr keyboard helpers, local list/status viewers and Markdown preview with personal workspace conventions.
 ---
 
-This is a local Herdr setup. Use native `herdr --skill` and command help for
-current pane, tab and agent operations. Inspect the active target before changing
-layout; preserve existing sessions, drafts and deliberate focus.
+Use these personal tools and conventions across local Codex projects. Prefer
+the relevant HTK viewer for lists, persisted status and Markdown previews;
+explicit output requests and project-specific instructions take precedence.
+
+Inside Herdr (`HERDR_ENV=1`), use native `herdr --skill` and command help for
+current pane, tab and agent operations. Inspect the caller's live identity before
+changing layout; inherited pane IDs can be stale in a shared Codex server.
+Preserve existing sessions, drafts and deliberate focus. Outside Herdr, use the
+local viewers normally and skip workspace/pane operations. Herdr owns terminal
+multiplexing; this workflow does not need tmux.
 
 `htk --help` lists the portable commands. `htk list --file FILE.json` watches
 ordinary lists; `htk status FILE.json` watches persisted work records. Use links
