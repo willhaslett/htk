@@ -1,0 +1,17 @@
+schema = 1
+extends = ["../htk/profiles/core.toml"]
+
+[profile]
+name = "htk-vim"
+
+[commands.herdr-pane]
+script = "libexec/herdr_controls/pane.py"
+requires = ["herdr"]
+
+[commands.herdr-pane-to-tab]
+script = "libexec/herdr_controls/pane_to_tab.py"
+requires = ["herdr"]
+
+[commands.herdr-move-workspace]
+script = "libexec/herdr_controls/workspace.py"
+requires = ["herdr"]

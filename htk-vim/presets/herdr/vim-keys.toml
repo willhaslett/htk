@@ -1,0 +1,118 @@
+# Optional Vim-style action bindings. Merge tables; do not duplicate [keys].
+# Commands assume the default ~/.local/bin installation; adjust if customized.
+[keys]
+prefix = "ctrl+n"
+new_tab = ["prefix+c", "cmd+t"]
+rename_tab = ["prefix+shift+t", "cmd+r"]
+rename_workspace = ["prefix+shift+w", "shift+cmd+r"]
+next_workspace = ["prefix+shift+j", "cmd+j"]
+previous_workspace = ["prefix+shift+k", "cmd+k"]
+previous_tab = ["prefix+p", "cmd+h"]
+next_tab = ["prefix+n", "cmd+l"]
+move_tab_previous = ["prefix+shift+h", "shift+cmd+h"]
+move_tab_next = ["prefix+shift+l", "shift+cmd+l"]
+cycle_pane_next = ["prefix+tab", "shift+cmd+p"]
+rename_pane = ["prefix+ctrl+r", "alt+cmd+r"]
+focus_pane_left = ["prefix+h", "alt+cmd+h"]
+focus_pane_down = ["prefix+j", "alt+cmd+j"]
+focus_pane_up = ["prefix+k", "alt+cmd+k"]
+focus_pane_right = ["prefix+l", "alt+cmd+l"]
+toggle_sidebar = ["prefix+b", "cmd+b"]
+new_workspace = ["prefix+shift+n", "cmd+n"]
+close_pane = ""
+split_vertical = ""
+split_horizontal = ""
+
+[[keys.command]]
+key = ["prefix+shift+e", "shift+cmd+e"]
+type = "shell"
+description = "Move focused pane to new tab"
+command = '"$HOME/.local/bin/herdr-pane-to-tab" --new-tab'
+
+[[keys.command]]
+key = ["prefix+shift+m", "shift+cmd+m"]
+type = "popup"
+width = 76
+height = 20
+description = "Move focused pane to existing tab"
+command = '"$HOME/.local/bin/herdr-pane-to-tab"'
+
+[[keys.command]]
+key = "prefix+;"
+type = "shell"
+description = "Create split right"
+command = '"$HOME/.local/bin/herdr-pane" create right'
+
+[[keys.command]]
+key = "prefix+shift+b"
+type = "shell"
+description = "Create split below"
+command = '"$HOME/.local/bin/herdr-pane" create down'
+
+[[keys.command]]
+key = ["prefix+d", "shift+cmd+j"]
+type = "shell"
+description = "Move workspace down"
+command = '"$HOME/.local/bin/herdr-move-workspace" down'
+
+[[keys.command]]
+key = ["prefix+u", "shift+cmd+k"]
+type = "shell"
+description = "Move workspace up"
+command = '"$HOME/.local/bin/herdr-move-workspace" up'
+
+[[keys.command]]
+key = ["prefix+alt+h", "shift+alt+cmd+h"]
+type = "shell"
+description = "Move pane left"
+command = '"$HOME/.local/bin/herdr-pane" move left'
+
+[[keys.command]]
+key = ["prefix+alt+j", "shift+alt+cmd+j"]
+type = "shell"
+description = "Move pane down"
+command = '"$HOME/.local/bin/herdr-pane" move down'
+
+[[keys.command]]
+key = ["prefix+alt+k", "shift+alt+cmd+k"]
+type = "shell"
+description = "Move pane up"
+command = '"$HOME/.local/bin/herdr-pane" move up'
+
+[[keys.command]]
+key = ["prefix+alt+l", "shift+alt+cmd+l"]
+type = "shell"
+description = "Move pane right"
+command = '"$HOME/.local/bin/herdr-pane" move right'
+
+[[keys.command]]
+key = ["prefix+1", "ctrl+alt+cmd+h"]
+type = "shell"
+description = "Create pane left"
+command = '"$HOME/.local/bin/herdr-pane" create left'
+
+[[keys.command]]
+key = ["prefix+2", "ctrl+alt+cmd+j"]
+type = "shell"
+description = "Create pane down"
+command = '"$HOME/.local/bin/herdr-pane" create down'
+
+[[keys.command]]
+key = ["prefix+3", "ctrl+alt+cmd+k"]
+type = "shell"
+description = "Create pane up"
+command = '"$HOME/.local/bin/herdr-pane" create up'
+
+[[keys.command]]
+key = ["prefix+4", "ctrl+alt+cmd+l"]
+type = "shell"
+description = "Create pane right"
+command = '"$HOME/.local/bin/herdr-pane" create right'
+
+[[keys.command]]
+key = ["prefix+x", "alt+cmd+w", "alt+cmd+x"]
+type = "popup"
+width = 82
+height = 10
+description = "Close pane (blocks open agent sessions)"
+command = '"$HOME/.local/bin/herdr-pane" close'

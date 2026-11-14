@@ -1,0 +1,11 @@
+# Navigation-only trial: native Herdr actions, no helper installation.
+[keys]
+prefix = "ctrl+n"
+previous_tab = ["prefix+p", "cmd+h"]
+next_tab = ["prefix+n", "cmd+l"]
+previous_workspace = ["prefix+shift+k", "cmd+k"]
+next_workspace = ["prefix+shift+j", "cmd+j"]
+focus_pane_left = ["prefix+h", "alt+cmd+h"]
+focus_pane_down = ["prefix+j", "alt+cmd+j"]
+focus_pane_up = ["prefix+k", "alt+cmd+k"]
+focus_pane_right = ["prefix+l", "alt+cmd+l"]

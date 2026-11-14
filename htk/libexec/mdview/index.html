@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown preview</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="lifetime.js"></script>
+    <script defer src="marked.js"></script>
+    <script defer src="purify.js"></script>
+    <script defer src="mermaid.js"></script>
+    <script defer src="viewer.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="file"><strong id="filename">Markdown preview</strong><span id="filepath"></span></div>
+      <span id="status" role="status">Connecting…</span>
+    </header>
+    <div id="error" role="alert" hidden></div>
+    <main><article id="document" aria-label="Markdown document"></article></main>
+  </body>
+</html>

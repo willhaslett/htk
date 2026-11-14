@@ -1,0 +1,29 @@
+# Will's approved Monokai Pro dark palette for Herdr.
+# Merge these theme tables into ~/.config/herdr/config.toml.
+[theme]
+name = "terminal"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "#181818"
+sidebar_bg = "#181818"
+active_row_bg = "#40383a"
+selection_bg = "#51484a"
+surface_dim = "#211e1f"
+surface0 = "#2c2525"
+surface1 = "#40383a"
+# Herdr 0.9.5 uses overlay0 for inactive pane borders and names.
+overlay0 = "#a8a9eb"
+overlay1 = "#948a8b"
+text = "#fff1f3"
+subtext0 = "#c1b9ba"
+# Selected-pane borders/names and active tab backgrounds share this soft yellow.
+accent = "#d4c188"
+red = "#fd6883"
+green = "#adda78"
+# ANSI yellow matches the accent used by selected tabs and panes.
+yellow = "#d4c188"
+blue = "#f38d70"
+mauve = "#a8a9eb"
+teal = "#85dacc"
+peach = "#f38d70"

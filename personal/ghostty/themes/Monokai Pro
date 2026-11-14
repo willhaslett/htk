@@ -1,0 +1,24 @@
+# Monokai Pro Dark Theme (custom - darkened background, soft yellow)
+background = 181818
+foreground = FFF1F3
+cursor-color = D4C188
+
+# Normal colors (0-7)
+palette = 0=2C2525
+palette = 1=FD6883
+palette = 2=ADDA78
+palette = 3=D4C188
+palette = 4=F38D70
+palette = 5=A8A9EB
+palette = 6=85DACC
+palette = 7=FFF1F3
+
+# Bright colors (8-15)
+palette = 8=72696A
+palette = 9=FD6883
+palette = 10=ADDA78
+palette = 11=D4C188
+palette = 12=F38D70
+palette = 13=A8A9EB
+palette = 14=85DACC
+palette = 15=FFF1F3

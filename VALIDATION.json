@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "prepared": "2026-11-13",
+  "platform": "macOS arm64",
+  "relocated_isolated_tests": {
+    "total": 211,
+    "components": {
+      "local_tools": 140,
+      "keyboard_helpers": 42,
+      "personal_helpers": 20,
+      "portable_package": 9
+    }
+  },
+  "fresh_public_bootstrap_install_command_popup_and_rollback": "passed",
+  "native_markdown_adapter_compilation": "passed",
+  "herdr_exported_config_check": "passed",
+  "agent_skill_validation": "passed",
+  "content_review": {
+    "first_party_neutrality_scan": "passed",
+    "all_file_internal_endpoint_scan": "passed",
+    "credential_signature_scan": "passed",
+    "source_machine_path_scan": "passed",
+    "no_git_history_external_symlinks_or_runtime_data": true,
+    "bundled_vendor_assets_and_license_notices_preserved": true
+  },
+  "limits": [
+    "Herdr and Ghostty interaction was not visually exercised.",
+    "Applications, optional fonts and user credentials are installed separately.",
+    "No existing application configuration or live service was changed."
+  ],
+  "zip_unzip_contents_and_executable_permissions": "passed"
+}

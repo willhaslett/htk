@@ -1,0 +1,19 @@
+id = "htk-vim.keymap"
+name = "Keyboard Shortcuts"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Direct custom shortcuts, unassigned standard actions and compact workspace controls."
+platforms = ["macos", "linux"]
+
+[[actions]]
+id = "show"
+title = "Show keyboard shortcuts"
+command = ["bash", "run.sh", "--open"]
+
+[[panes]]
+id = "grid"
+title = "KEYBOARD SHORTCUTS"
+placement = "popup"
+width = 100
+height = 50
+command = ["bash", "run.sh"]

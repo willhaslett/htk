@@ -1,0 +1,18 @@
+# Merge into Herdr's config.toml after running htk install.
+# These replace the existing workspace-creation bindings; don't append duplicates.
+[keys]
+new_workspace = ""
+
+# Ghostty forwards Cmd+N as Ctrl+N,N. Direct Cmd+N also works in Herdr.
+[[keys.command]]
+key = ["prefix+shift+n", "cmd+n"]
+type = "shell"
+description = "New numbered workspace"
+command = '"$HOME/.local/bin/new-herdr-workspace" >> "$HOME/.config/herdr/new-workspace.log" 2>&1'
+
+# Ghostty forwards Shift+Cmd+N as Ctrl+N,P.
+[[keys.command]]
+key = ["prefix+shift+p", "shift+cmd+n"]
+type = "shell"
+description = "New numbered workspace with Codex"
+command = '"$HOME/.local/bin/new-herdr-workspace" --codex >> "$HOME/.config/herdr/new-codex-workspace.log" 2>&1'

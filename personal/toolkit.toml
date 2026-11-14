@@ -1,0 +1,16 @@
+schema = 1
+extends = ["../htk-vim/toolkit.toml"]
+
+[profile]
+name = "htk-portable"
+skill_name = "htk"
+skill = "skills/htk"
+load_at_startup = true
+command_wrapper = "libexec/viewer_pane_name/wrapper.py"
+
+[commands.new-herdr-workspace]
+script = "libexec/herdr_workspace/create.py"
+requires = ["herdr"]
+
+[views.markdown]
+presentation = "window"

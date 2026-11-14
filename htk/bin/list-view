@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+launcher=$0
+while [ -L "$launcher" ]; do
+  launcher_dir=$(cd -P "$(dirname "$launcher")" && pwd)
+  launcher=$(readlink "$launcher")
+  if [[ "$launcher" != /* ]]; then launcher="$launcher_dir/$launcher"; fi
+done
+root=$(cd -P "$(dirname "$launcher")/.." && pwd)
+exec /bin/bash "$root/libexec/python.sh" "$root/libexec/toolkit.py" run list-view "$@"

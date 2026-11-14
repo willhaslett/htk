@@ -1,0 +1,190 @@
+# Portable appearance and shortcuts. Merge only after backing up an existing config.
+[ui]
+window_title = "HTK · {workspace}"
+prompt_new_tab_name = false
+
+[ui.sound]
+enabled = false
+
+[ui.sidebar.spaces]
+rows = [["state_icon", "workspace"]]
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "#181818"
+sidebar_bg = "#181818"
+active_row_bg = "#40383a"
+selection_bg = "#51484a"
+surface_dim = "#211e1f"
+surface0 = "#2c2525"
+surface1 = "#40383a"
+overlay0 = "#a8a9eb"
+overlay1 = "#948a8b"
+text = "#fff1f3"
+subtext0 = "#c1b9ba"
+accent = "#d4c188"
+red = "#fd6883"
+green = "#adda78"
+yellow = "#d4c188"
+blue = "#f38d70"
+mauve = "#a8a9eb"
+teal = "#85dacc"
+peach = "#f38d70"
+
+[keys]
+prefix = "ctrl+n"
+new_tab = ["prefix+c", "cmd+t"]
+new_workspace = ""
+rename_tab = ["prefix+shift+t", "cmd+r"]
+rename_workspace = ["prefix+shift+w", "shift+cmd+r"]
+next_workspace = ["prefix+shift+j", "cmd+j"]
+previous_workspace = ["prefix+shift+k", "cmd+k"]
+previous_tab = ["prefix+p", "cmd+h"]
+next_tab = ["prefix+n", "cmd+l"]
+move_tab_previous = ["prefix+shift+h", "shift+cmd+h"]
+move_tab_next = ["prefix+shift+l", "shift+cmd+l"]
+cycle_pane_next = ["prefix+tab", "shift+cmd+p"]
+close_pane = ""
+close_tab = ""
+help = ""
+settings = ""
+detach = ""
+reload_config = ""
+open_notification_target = ""
+workspace_picker = ""
+goto = ""
+new_worktree = ""
+close_workspace = ""
+switch_tab = ""
+rename_pane = ["prefix+ctrl+r", "alt+cmd+r"]
+edit_scrollback = ""
+copy_mode = ""
+focus_pane_left = ["prefix+h", "alt+cmd+h"]
+focus_pane_down = ["prefix+j", "alt+cmd+j"]
+focus_pane_up = ["prefix+k", "alt+cmd+k"]
+focus_pane_right = ["prefix+l", "alt+cmd+l"]
+swap_pane_left = ""
+swap_pane_down = ""
+swap_pane_up = ""
+swap_pane_right = ""
+cycle_pane_previous = ""
+split_vertical = ""
+split_horizontal = ""
+zoom = ""
+resize_mode = ""
+toggle_sidebar = ["prefix+b", "cmd+b"]
+
+[[keys.command]]
+key = ["prefix+shift+n", "cmd+n"]
+type = "shell"
+description = "New numbered workspace"
+command = "\"$HOME/.local/bin/new-herdr-workspace\" >> \"$HOME/.config/herdr/new-workspace.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+shift+p", "shift+cmd+n"]
+type = "shell"
+description = "New numbered workspace with Codex"
+command = "\"$HOME/.local/bin/new-herdr-workspace\" --codex >> \"$HOME/.config/herdr/new-codex-workspace.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+shift+e", "shift+cmd+e"]
+type = "shell"
+description = "Move focused pane to new tab"
+command = "\"$HOME/.local/bin/herdr-pane-to-tab\" --new-tab >> \"$HOME/.config/herdr/pane-to-tab.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+shift+m", "shift+cmd+m"]
+type = "popup"
+width = 76
+height = 20
+description = "Move focused pane to existing tab"
+command = "\"$HOME/.local/bin/herdr-pane-to-tab\""
+
+[[keys.command]]
+key = "prefix+;"
+type = "shell"
+description = "Create split right"
+command = "\"$HOME/.local/bin/herdr-pane\" create right >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = "prefix+shift+b"
+type = "shell"
+description = "Create split below"
+command = "\"$HOME/.local/bin/herdr-pane\" create down >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+d", "shift+cmd+j"]
+type = "shell"
+description = "Move workspace down"
+command = "\"$HOME/.local/bin/herdr-move-workspace\" down"
+
+[[keys.command]]
+key = ["prefix+u", "shift+cmd+k"]
+type = "shell"
+description = "Move workspace up"
+command = "\"$HOME/.local/bin/herdr-move-workspace\" up"
+
+[[keys.command]]
+key = ["prefix+alt+h", "shift+alt+cmd+h"]
+type = "shell"
+description = "Move pane left"
+command = "\"$HOME/.local/bin/herdr-pane\" move left >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+alt+j", "shift+alt+cmd+j"]
+type = "shell"
+description = "Move pane down"
+command = "\"$HOME/.local/bin/herdr-pane\" move down >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+alt+k", "shift+alt+cmd+k"]
+type = "shell"
+description = "Move pane up"
+command = "\"$HOME/.local/bin/herdr-pane\" move up >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+alt+l", "shift+alt+cmd+l"]
+type = "shell"
+description = "Move pane right"
+command = "\"$HOME/.local/bin/herdr-pane\" move right >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+1", "ctrl+alt+cmd+h"]
+type = "shell"
+description = "Create pane left"
+command = "\"$HOME/.local/bin/herdr-pane\" create left >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+2", "ctrl+alt+cmd+j"]
+type = "shell"
+description = "Create pane down"
+command = "\"$HOME/.local/bin/herdr-pane\" create down >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+3", "ctrl+alt+cmd+k"]
+type = "shell"
+description = "Create pane up"
+command = "\"$HOME/.local/bin/herdr-pane\" create up >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+4", "ctrl+alt+cmd+l"]
+type = "shell"
+description = "Create pane right"
+command = "\"$HOME/.local/bin/herdr-pane\" create right >> \"$HOME/.config/herdr/pane-controls.log\" 2>&1"
+
+[[keys.command]]
+key = ["prefix+x", "alt+cmd+w", "alt+cmd+x"]
+type = "popup"
+width = 82
+height = 10
+description = "Close pane (blocks open agent sessions)"
+command = "\"$HOME/.local/bin/herdr-pane\" close"
+
+[[keys.command]]
+key = ["prefix+?", "cmd+/"]
+type = "plugin_action"
+command = "htk-vim.keymap.show"
+description = "Show directional shortcuts"

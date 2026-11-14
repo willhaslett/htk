@@ -1,0 +1,4 @@
+# Workspace names and status are the sidebar's navigation units.
+# Merge this table into ~/.config/herdr/config.toml.
+[ui.sidebar.spaces]
+rows = [["state_icon", "workspace"]]

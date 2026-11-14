@@ -1,0 +1,6 @@
+# Link plugins/keymap first, then merge into your Herdr config.
+[[keys.command]]
+key = ["prefix+?", "cmd+/"]
+type = "plugin_action"
+command = "htk-vim.keymap.show"
+description = "Show keyboard shortcuts"
